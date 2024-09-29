@@ -1,0 +1,57 @@
+---->>> ALL ABOUT EXPRESS <<<-----
+---->>>>> ENJOY LEARNING <<<<------
+---->>>>>> EXPRESS API <<<<<<------
+
+1. express ()
+    A. Methods
+        - express.json()👌             - express.static()👌          - express.Router()👌
+        - express.raw()👌              - express.text()👌            - express.urlencoded()👌
+      
+2. Application 
+    A. Properties
+        - app.locals👌                 - app.mountpath👌
+       
+    B. Events
+        - app.on()👌 
+
+    C. Methods
+        - app.all()👌                  - app.get()👌               - app.put()👌
+        - app.delete()👌               - app.listen()👌            - app.render()👌
+        - app.disable()👌              - app.METHOD()👌            - app.route()👌
+        - app.disabled()👌             - app.param()👌             - app.set()👌
+        - app.enable()👌               - app.path()👌              - app.use()👌
+        - app.engine()👌               - app.post()👌
+        - app.get()👌                 
+
+3. Request  
+    A. Properties
+        - req.app                    - req.ip                   - req.protocol
+        - req.baseUrl                - req.ips                  - req.query
+        - req.body                   - req.method               - req.res
+        - req.cookies                - req.originalUrl          - req.route
+        - req.fresh                  - req.params               - req.secure
+        - req.hostname               - req.path                 - req.signedCookies
+        - req.stale                  - req.subdomains           - req.xhr
+
+    B. Methods
+        - req.accepts()             - req.acceptsCharsets()     - req.accepetsEncodings()
+        - req.accepetsLanguages()   - req.get()                 - req.is()  
+        - req.param()               - req.range()
+
+4. Response
+    A. Properties
+        - res.app                   - res.headerSent            - res.locals
+
+    B. Methods
+        - res.append()              - res.attachment()          - res.cookie()
+        - res.clearCookie()         - res.download()            - res.end()
+        - res.format()              - res.get()                 - res.json()
+        - res.jsonp()               - res.links()               - res.location() 
+        - res.redirect()            - res.render()              - res.send()
+        - res.sendFile()            - res.sendStatus()          - res.set()
+        - res.status()              - res.type()                - res.vary()
+
+5. Router
+    A. Methods
+        - router.all()              - router.METHOD()           - router.param() 
+        - router.route()            - router.use()
