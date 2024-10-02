@@ -4,54 +4,54 @@
 
 1. express ()
     A. Methods
-        - express.json()👌             - express.static()👌          - express.Router()👌
-        - express.raw()👌              - express.text()👌            - express.urlencoded()👌
+        - express.json()👌          -> allow json req body   - express.static()👌   -> process view rss       - express.Router()👌      ->  management router (modular)
+        - express.raw()👌           -> allow raw req body    - express.text()👌     -> process text rss       - express.urlencoded()👌  -> allow urlencoded req
       
 2. Application 
     A. Properties
-        - app.locals👌                 - app.mountpath👌
+        - app.locals👌              -> create global var    - app.mountpath👌       -> join path
        
     B. Events
-        - app.on()👌 
+        - app.on()👌                -> event handler app
 
     C. Methods
-        - app.all()👌                  - app.get()👌               - app.put()👌
-        - app.delete()👌               - app.listen()👌            - app.render()👌
-        - app.disable()👌              - app.METHOD()👌            - app.route()👌
-        - app.disabled()👌             - app.param()👌             - app.set()👌
-        - app.enable()👌               - app.path()👌              - app.use()👌
-        - app.engine()👌               - app.post()👌
-        - app.get()👌                 
+        - app.all()👌               -> route all            - app.get()👌          -> get locals              - app.put()👌             -> update route   
+        - app.delete()👌            -> route delete         - app.listen()👌       -> run server              - app.render()👌          -> render rss (html, css)   
+        - app.disable()👌           -> disable app setting  - app.METHOD()👌       -> all method              - app.route()👌           -> route all method at once
+        - app.disabled()👌          -> list disable         - app.param()👌        -> rule middleware         - app.set()👌             -> set configuration app   
+        - app.enable()👌            -> enable app setting   - app.path()👌         -> get path                - app.use()👌             -> use middleware, tools, route
+        - app.engine()👌            -> choose engine        - app.post()👌         -> post route  
+        - app.get()👌               -> route get()            
 
 3. Request  
     A. Properties
-        - req.app                    - req.ip                   - req.protocol
-        - req.baseUrl                - req.ips                  - req.query
-        - req.body                   - req.method               - req.res
-        - req.cookies                - req.originalUrl          - req.route
-        - req.fresh                  - req.params               - req.secure
-        - req.hostname               - req.path                 - req.signedCookies
-        - req.stale                  - req.subdomains           - req.xhr
+        - req.app👌                 -> get configuration    - req.ip👌              -> ip client              - req.protocol👌          -> get protocol req
+        - req.baseUrl👌             -> get baseUrl          - req.ips👌             -> list ip client         - req.query👌             -> get query request
+        - req.body👌                -> get payload          - req.method👌          -> method http            - req.res👌               -> holds req reference 
+        - req.cookies👌             -> get cookies          - req.originalUrl👌     -> full url               - req.route👌             -> get description route  
+        - req.fresh👌               -> boolean              - req.params👌          -> url param              - req.secure👌            -> if http return false
+        - req.hostname👌            -> get hostname         - req.path👌            -> path request           - req.signedCookies👌     -> if req with cookies return true
+        - req.stale👌               -> booelan              - req.subdomains👌      -> subdomain server       - req.xhr👌               -> if req with XMLHTTPRequest return true    
 
     B. Methods
-        - req.accepts()             - req.acceptsCharsets()     - req.accepetsEncodings()
-        - req.accepetsLanguages()   - req.get()                 - req.is()  
-        - req.param()               - req.range()
+        - req.accepts()👌           -> pick content type    - req.acceptsCharsets()👌-> acceptsCharsets conf  - req.accepetsEncodings()👌-> get accepetsEncodings conf
+        - req.accepetsLanguages()👌 -> pick language        - req.get()👌            -> get req header        - req.is()👌               -> if parameter (content-type) match with req return true   
+        - req.param()👌             -> deprecated           - req.range()👌          -> range byte content 
 
 4. Response
     A. Properties
-        - res.app                   - res.headerSent            - res.locals
+        - res.app👌                 -> send configuration   - res.headerSent👌       -> header send status?   - res.locals
 
     B. Methods
-        - res.append()              - res.attachment()          - res.cookie()
-        - res.clearCookie()         - res.download()            - res.end()
-        - res.format()              - res.get()                 - res.json()
-        - res.jsonp()               - res.links()               - res.location() 
-        - res.redirect()            - res.render()              - res.send()
-        - res.sendFile()            - res.sendStatus()          - res.set()
-        - res.status()              - res.type()                - res.vary()
+        - res.append()👌            -> set header allow same - res.attachment()👌    -> label on respon       - res.cookie()👌             -> set http cookie to client
+        - res.clearCookie()👌       -> clear cookie client   - res.download()👌      -> send file + opt down  - res.end()👌                -> close connection 
+        - res.format()👌            -> give option res body  - res.get()👌           -> get value header      - res.json()👌               -> send json payload 
+        - res.jsonp()👌             -> send json(solve CORS) - res.links()👌         -> set header link       - res.location()👌           -> set header location 
+        - res.redirect()👌          -> redirect ke path lain - res.render()👌        -> render file dinamis   - res.send()👌               -> send body all type
+        - res.sendFile()👌          -> send file no opt down - res.sendStatus()👌    -> only send static      - res.set()👌                -> set header one/multiple                   
+        - res.status()👌            -> send status info      - res.type()👌          -> set type body         - res.vary()👌               -> set header vary (CDN/PROXY)
 
 5. Router
     A. Methods
-        - router.all()              - router.METHOD()           - router.param() 
-        - router.route()            - router.use()
+        - router.all()👌            -> route all at once     - router.METHOD()👌     -> get/post/put/etc      - router.param()👌           -> deprecated 
+        - router.route()👌          -> route combine         - router.use()👌        -> set middleware on spesific route   

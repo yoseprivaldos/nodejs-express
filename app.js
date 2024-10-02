@@ -2,17 +2,21 @@ import express from "express";
 
 const app = express();
 
-//basic routing
-app.get("/product/:id", (req, res) => {
-  res.send("Hello World");
-  console.log(req);
-});
+app.get("/video", (req, res) => {
+  const ranges = req.range(500000);
 
-app.post("/product/:id", express.json(), (req, res) => {
-  console.log(req.params.id);
-  res.send(`Product with ID ${req.params.id} created`);
-});
+  if (ranges) {
+    const start = ranges[0].start;
+    const end = ranges[0].end;
+    const contentLength = end - start + 1;
 
-app.listen(3000, () => {
-  console.log("Server berjalan di port http://localhost:3000");
+    res.writeHead(206, {
+      "content-range": `bytes ${start}-${end}/${fileSize}`,
+      "accept-ranges": "bytes",
+      "content-length": contentLength,
+      "Content-Type": "video/mp4",
+    });
+
+    const fileStream = fs.createReadStream();
+  }
 });
