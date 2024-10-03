@@ -1,0 +1,13 @@
+YANG PERLU DIPELAJARI SELANJUTNNYA
+
+mempelajari, library/package/middleware pihak ketiga seperti
+
+1. View Engine (EJS atau PUG)
+2. File Upload (Multer atau express-fileupload)
+3. Socket.IO
+4. Memperdalam Supertest dan Jest untuk melakukan unit test dalam express
+5. Memperdalam Winston untuk melakukan logging
+6. Mempelajari Helmet untuk pengamanan aplikasi express
+7. ORM untuk Express seperti (Mongoose, Sequalize, atau Prisma ORM)
+8. Validasi Express (express-validator, validator.js, node-validator, yup, atau joi)
+9. Memperdalam konsep HTTP
