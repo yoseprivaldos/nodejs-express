@@ -5,22 +5,29 @@ const app = express();
 
 const router = express.Router();
 
+router.use((req, res, next) => {
+  console.log(`Receive request: ${req.originalUrl}`);
+  next();
+});
+
 router.get("/products", (req, res) => {
-  res.send("Get Product");
+  res.send("Get Products");
 });
 
 router.post("/products/post", (req, res) => {
-  res.send("Post Product");
+  res.send("Post Products");
 });
 
-router.put("/product/:id", (req, res) => {
-  res.send("Put Product");
+router.put("/products/:id", (req, res) => {
+  res.send("Put Products");
 });
+
+app.use("/", router);
 
 test("test router", async () => {
-  const response1 = await request(router).get("/products");
-  const response2 = await request(router).post("/products/post");
-  const response3 = await request(router).put("/products/123123");
+  const response1 = await request(app).get("/products");
+  const response2 = await request(app).post("/products/post");
+  const response3 = await request(app).put("/products/123123");
 
   expect(response1.text).toBe("Get Products");
   expect(response2.text).toBe("Post Products");
